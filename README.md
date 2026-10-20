@@ -32,11 +32,16 @@ Variables d'environnement : `PORT` (défaut 3000), `APP_ENV` (`dev`, `staging`, 
 
 ## Feuille de route
 
-| Jour | Contenu | État |
+Objectif : construire pas à pas un projet de test complet avec **Playwright** (tests API, Page Object Model, Cucumber/BDD) et un pipeline **CI/CD GitHub Actions**.
+
+| Étape | Contenu | État |
 |---|---|---|
 | 1 | Cahier des charges + API catalogue, créneaux, comptes | fait |
 | 2 | Composeur de bouquet, verrouillage de compte, frontend React | à faire |
 | 3 | Panier, paiement, back-office « L'Atelier » | à faire |
-| 4 | Plan de test manuel et matrice de cas de test | à faire |
-| 5+ | Tests unitaires, API, E2E Playwright, pipeline GitHub Actions | à faire |
+| 4 | Test exploratoire, plan de test manuel, matrice de cas de test, rapports de bugs | en cours |
+| 5 | Tests unitaires (logique métier) et tests API Playwright, avec un client API réutilisable | à faire |
+| 6 | Pipeline GitHub Actions (tests à chaque push et PR, rapport, environnements dev et staging) | à faire |
+| 7 | Tests E2E Playwright avec Page Object Model, sur les parcours critiques | à faire |
+| 8 | Cucumber (BDD) : scénarios Gherkin sur 3 à 4 parcours clés, liés aux exigences FR-xxx | à faire |
 | Final | Mise en forme portfolio | à faire |
