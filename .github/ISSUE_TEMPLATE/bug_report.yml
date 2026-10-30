@@ -1,0 +1,54 @@
+name: Rapport de bug
+description: Signaler un écart entre le comportement attendu (cahier des charges) et le comportement observé
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: input
+    id: requirement
+    attributes:
+      label: Exigence concernée
+      description: Identifiant dans docs/GREENBOX-FRS-001.md
+      placeholder: "FR-ACC-002"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Sévérité
+      description: À juger selon l'impact pour l'utilisateur ou l'entreprise
+      options:
+        - Bloquante (le produit ne peut pas être utilisé)
+        - Majeure (fonction importante incorrecte, pas de contournement simple)
+        - Mineure (incorrect mais contournable)
+        - Cosmétique (affichage, texte)
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Méthode, adresse, corps de la requête. Quelqu'un d'autre doit pouvoir refaire exactement la même chose.
+      placeholder: |
+        1. POST /api/auth/register avec email "ons@test.fr" -> 201
+        2. POST /api/auth/register avec email "Ons@test.fr"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu
+      description: Ce que dit le cahier des charges
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Résultat obtenu
+      description: Ce que l'application a fait (code de réponse, message). Glisse une capture d'écran ici.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement
+      placeholder: "dev, API locale, Postman"
